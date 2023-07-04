@@ -21,12 +21,15 @@ jobs:
         run: jupyter nbconvert --to html --no-input snowpack-obs-comparison-and-trends.ipynb
         
       - name: Add html file to repository
-        run:
-         git config --global user.email "no-reply@github.com"
-         git config --global user.name "GitHub Actions"
-         git add snowpack-obs-comparison-and-trends.html
-         git commit -m "Export notebook to HTML"
-         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-         git push
+ 
         env:
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.email "jennifer.f.morse@colorado.edu"
+          git config user.name "Jen-Morse"
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          git checkout master
+          echo "foo" >> file.txt
+          git add file.txt
+          git commit -m "Add .html blog file to repository"
+          git push origin master
