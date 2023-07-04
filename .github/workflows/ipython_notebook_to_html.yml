@@ -1,0 +1,21 @@
+name: Export IPython Notebook to HTML
+
+# Controls when the action will run. 
+on: workflow_dispatch  
+  # A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+      
+     # - name: Install nbconvert (not sure if I need this?)
+     #  run: -c conda-forge nbconvert
+        
+      - name: Convert ipynb file to html and drops code cells
+        run: jupyter nbconvert --to html --no-input snowpack-obs-comparison-and-trends.ipynb
