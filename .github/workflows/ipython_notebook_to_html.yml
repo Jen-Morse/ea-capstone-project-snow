@@ -1,7 +1,7 @@
 name: Export IPython Notebook to HTML
 
 # Controls when the action will run. 
-on: workflow_dispatch  
+on: workflow_dispatch
   # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -30,4 +30,4 @@ jobs:
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           git add --all
           git commit -m "initial commit"
-          git push origin master
+          git push origin HEAD:main
