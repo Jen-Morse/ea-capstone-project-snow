@@ -1,6 +1,17 @@
 # snowpack-obs-comparison-and-trends
 # Snowpack Observation Comparison and trend analysis for City of Boulder Water Resources Management 
 
+
+### Project Rationale:
+
+In the Western United States- where 75% of the water supply begins as snow (Nijuis, M, 2014)- snowpack data from the Natural Resource Conservation Service's Snotel Network has historically been used to predict stream flow and downstream water availability from Snow Water Equivalent (SWE). As Climate change has increased uncertainties in both the amount and timing of snowpack accumulation and snow melt, the relationship between existing Snotel site SWE data, and downstream water availability has changed. And the ability of water managers to make informed water supply decisions from Snotel data alone has become more challenging.
+
+The City of Boulder, to better allocate, and plan for changes to its source water supply, is working to enhance the data it uses to understand seasonal snowpack, streamflow, and long-term trends through:
+utilizing existing snowpack data which has been collected in, and adjacent to the North Boulder Creek Watershed as part of the Niwot Ridge Long Term Ecological Research Project (LTER), and
+funding Airborne Snow Observatory flights beginning in spring of 2023 to map snow depth and model snow water equivalent (SWE) across their source water locations. 
+
+Nijhuis, M. (2014). When the snows fail. National Geographic. Retrieved April 9, 2023, from https://www.nationalgeographic.com/west-snow-fail/ National Aeronautics and Space Administration. (n.d.). MOD10C1.006 MODIS/Terra Snow Cover Daily L3 Global 0.05Deg CMG V006. NASA Earth Observatory. Retrieved May 3, 2023, from https://earthobservatory.nasa.gov/global-maps/MOD10C1_M_SNOW
+
 ### Project Questions: 
 
 Can existing Niwot Long Term Ecological Research (LTER) snowpack and hydrological data be used to better inform City of Boulder Water Resources Management short-term water supply decisions (source selection, leasing to agricultural partners, municipal drought declaration) or identify long-term trends in snowpack for future planning. Can this data be leveraged to increase the value of Airborne Snow Observatory flight data for water supply decision making.
@@ -13,17 +24,13 @@ Can existing Niwot Long Term Ecological Research (LTER) snowpack and hydrologica
 
 ### Instructions to set up Python Environment and Run Notebook
 
-Detailed instructions and links on how to set up python and create a python environment can be found here:  https://www.earthdatascience.org/workshops/setup-earth-analytics-python/setup-python-conda-earth-analytics-environment/
+Detailed instructions and resources on how to set up python and create a python environment can be found here at Earth Lab's Earth Data Science online textbook and tutorials here:  https://www.earthdatascience.org/workshops/setup-earth-analytics-python/setup-python-conda-earth-analytics-environment/
 
 To set up the Python Environment needed to run the snowpack-obs-comparison-and-trends.ipynb notebook, follow the above instructions and modify as follows:
 
 - fork and clone the snowpack-obs-comparison-and-trends repository: https://github.com/Jen-Morse/ea-capstone-project-snow, rather than the earth-analytics repository and environment.yml file.
 
-- create the python environment with all of the libraries needed to run the snowpack-obs-comparison-and-trends.ipynb notebook file. You may want to use mamba instead of conda to create your environment as it may solve the environment more quickly. To do this, use
-```
-   mamba env create -f environment.yml
-```
-   in place of conda env create -f environment.yml.
+- create the python environment with all of the libraries needed to run the snowpack-obs-comparison-and-trends.ipynb notebook file. 
 
 - Once the environment has been created and activated, type
 ```
