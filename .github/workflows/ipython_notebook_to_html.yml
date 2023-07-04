@@ -26,4 +26,7 @@ jobs:
          git config --global user.name "GitHub Actions"
          git add snowpack-obs-comparison-and-trends.html
          git commit -m "Export notebook to HTML"
+         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
          git push
+        env:
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
