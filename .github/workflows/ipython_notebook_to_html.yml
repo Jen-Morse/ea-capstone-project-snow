@@ -28,8 +28,6 @@ jobs:
           git config user.email "jennifer.f.morse@colorado.edu"
           git config user.name "Jen-Morse"
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          git checkout master
-          echo "foo" >> file.txt
-          git add file.txt
+          git add snowpack-obs-comparison-and-trends.html
           git commit -m "Add .html blog file to repository"
           git push origin master
