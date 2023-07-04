@@ -22,8 +22,8 @@ jobs:
         
       - name: Add html file to repository
         run:
-         git config --local user.email "no-reply@github.com"
-         git config --local user.name "GitHub Actions"
+         git config --global user.email "no-reply@github.com"
+         git config --global user.name "GitHub Actions"
          git add snowpack-obs-comparison-and-trends.html
          git commit -m "Export notebook to HTML"
          git push
