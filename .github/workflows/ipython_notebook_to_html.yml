@@ -19,3 +19,8 @@ jobs:
         
       - name: Convert ipynb file to html and drops code cells
         run: jupyter nbconvert --to html --no-input snowpack-obs-comparison-and-trends.ipynb
+        
+      - uses: mikeal/publish-to-github-action@master
+  env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    BRANCH_NAME: '' #optional defaults to master
