@@ -13,22 +13,25 @@ Can existing Niwot Long Term Ecological Research (LTER) snowpack and hydrologica
 
 ### Instructions to set up Python Environment and Run Notebook
 
-1) Follow the instructions at:   https://www.earthdatascience.org/workshops/setup-earth-analytics-python/setup-python-conda-earth-analytics-environment/, with the exception that instead of cloning the repository from earth-analytics, clone the snowpack-obs-comparison-and-trends repository here: https://github.com/Jen-Morse/ea-capstone-project-snow.
+Detailed instructions and links on how to set up python and create a python environment can be found here:  https://www.earthdatascience.org/workshops/setup-earth-analytics-python/setup-python-conda-earth-analytics-environment/
 
-2) This will create the python environment with all of the libraries needed to run the snowpack-obs-comparison-and-trends.ipynb notebook file. You may want to use mamba instead of conda to create your environment as it will likely run much faster. To do this, use
+To set up the Python Environment needed to run the snowpack-obs-comparison-and-trends.ipynb notebook, follow the above instructions and modify as follows:
+
+- fork and clone the snowpack-obs-comparison-and-trends repository: https://github.com/Jen-Morse/ea-capstone-project-snow, rather than the earth-analytics repository and environment.yml file.
+
+- create the python environment with all of the libraries needed to run the snowpack-obs-comparison-and-trends.ipynb notebook file. You may want to use mamba instead of conda to create your environment as it may solve the environment more quickly. To do this, use
 ```
    mamba env create -f environment.yml
 ```
-   (in place of conda env create -f environment.yml).
+   in place of conda env create -f environment.yml.
 
-
-4) Once the environment has been created and activated, type
+- Once the environment has been created and activated, type
 ```
    jupyter notebook
 ```
-at the command line to open the cloned repository in Jupyter with a web browser. 
+at the command line to open the cloned repository in Jupyter with a web browser. You may now preview any of the repository files. To run the notebook, open the snow-pack-obs-comparison-and-trends.ipynb file and select 'Run All' from the Kernal drop down menu.
 
-You may also run the notebook from the command line if you would like the outputs with out previewing the notebook with Jupyter. To do this type
+- You may also run the notebook from the command line if you would like the outputs with out previewing the notebook with Jupyter. To do this type
 ```
    jupyter run snow-pack-obs-comparison-and-trends.ipynb
 ```
