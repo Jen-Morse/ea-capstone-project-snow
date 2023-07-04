@@ -38,6 +38,7 @@ dependencies:
   - netcdf4
   - nc-time-axis
   - regionmask
+  - ulmo
 
   # Natural language processing
   - nltk
