@@ -14,8 +14,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       
-     # - name: Install nbconvert (not sure if I need this?)
-     #  run: -c conda-forge nbconvert
+      - name: Install nbconvert (not sure if I need this?)
+        run: -c conda-forge nbconvert
         
       - name: Convert ipynb file to html and drops code cells
         run: jupyter nbconvert --to html --no-input snowpack-obs-comparison-and-trends.ipynb
