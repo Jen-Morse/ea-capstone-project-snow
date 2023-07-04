@@ -1,7 +1,5 @@
-# ea-capstone-project-snow
-
-# Earth Analytics Capstone Project:
-# Snow Observations Comparison for City of Boulder Water Resources Management 
+# snowpack-obs-comparison-and-trends
+# Snowpack Observation Comparison and trend analysis for City of Boulder Water Resources Management 
 
 ### Project Questions: 
 
@@ -10,21 +8,41 @@ Can existing Niwot Long Term Ecological Research (LTER) snowpack and hydrologica
 ### Project Outcomes:
 
 - A python code which pulls in LTER and ASO data into an annual report or dashboard with snowpack and hydrological yearly metrics and trends relevant to City of Boulder Water Resources Management (easily readable and reproducible as new data is available each year).
-- A data set of modeled historical snowpack and snowmelt for the upper Green Lakes Valley from existing LTER data sets (listed below).
+- A data set of modeled historical snowpack and snowmelt timing for the upper Green Lakes Valley from existing LTER data sets (listed below).
 - A data set of potential location(s) for additional ground-based to improve future ASO flight data modeling, and snowpack estimates for the upper Green Lakes Valley (and potentially for other City of Boulder source water locations).
 
-### Environment Requirements
+### Instructions to set up Python Environment and Run Notebook
 
-To  set up the environment.yml python environment needed to run this notebook, follow the instructions at:  https://www.earthdatascience.org/workshops/setup-earth-analytics-python/setup-python-conda-earth-analytics-environment/
+1) Follow the instructions at:   https://www.earthdatascience.org/workshops/setup-earth-analytics-python/setup-python-conda-earth-analytics-environment/, with the exception that instead of cloning the repository from earth-analytics, clone the snowpack-obs-comparison-and-trends repository here: https://github.com/Jen-Morse/ea-capstone-project-snow.
+
+2) This will create the python environment with all of the libraries needed to run the snowpack-obs-comparison-and-trends.ipynb notebook file. You may want to use mamba instead of conda to create your environment as it will likely run much faster. To do this, use
+```
+   mamba env create -f environment.yml
+```
+   (in place of conda env create -f environment.yml).
+
+
+4) Once the environment has been created and activated, type
+```
+   jupyter notebook
+```
+at the command line to open the cloned repository in Jupyter with a web browser. 
+
+You may also run the notebook from the command line if you would like the outputs with out previewing the notebook with Jupyter. To do this type
+```
+   jupyter run snow-pack-obs-comparison-and-trends.ipynb
+```
+at the command line.
 
 ### Data Access
+
 
 #### Niwot Ridge LTER Snow Observation Data Sets:
 - Snow Survey Interpolated Snow Depth
 - Snowpit depth, SWE, density for Niwot Ridge Saddle and Green Lakes Valley
 - Snow Depth from Niwot Ridge Saddle snow grid
 
-Data to run the analysis in the Snow Observations Comparison Notebook from the Niwot Ridge Long Term Ecological Research Project (LTER) is housed on the Environmental Data Initative (EDI) Data Portal at https://portal.edirepository.org/nis/home.jsp.
+Data to run the analysis in the snow-pack-obs-comparison-and-trends.ipynb notebook from the Niwot Ridge Long Term Ecological Research Project (LTER) is housed on the Environmental Data Initative (EDI) Data Portal at https://portal.edirepository.org/nis/home.jsp.
 
 To download a data package from the EDI Portal you need to define the URL with the following parameters: 
 
@@ -36,7 +54,7 @@ To download a data package from the EDI Portal you need to define the URL with t
 The download URL with then be composed of:
 https://pasta.lternet.edu/package/data/eml/{scope}/{identifier}/{revision}/{entityId} 
 
-There is a function in the notebook for creating the URL's once the parameters are known, which are obtained from each data package in the EDI Data Repository: https://edirepository.org.
+There is a function in the repository in downloader.py for creating the URL's once the parameters are known, which are obtained from each data package in the EDI Data Repository: https://edirepository.org.
 
 Data from the EDI Data Repository can also be downloaded directly from each data package page, which can be accessed via:
 
@@ -55,6 +73,11 @@ Data from the EDI Data Repository can also be downloaded directly from each data
 ASO data sets are available for download at: https://data.airbornesnowobservatories.com
 through free sign up with ArcGIS Enterprise with ESRI, and user name and password.
 
-*Note that because Boulder Creek Watershed ASO flights for spring of 2023 have not yet occurred, this data is not currently available and not included in the current notebook.
+#### National Resource Conservation Service Snotel Data Sets
+- University Camp Snotel Site # 838 Snow Water Equivalent (SWE)
+- University Camp Snotel Site # 838 Snowdepth
 
+Snotel site descriptions and data resources can be found at: http://www.wcc.nrcs.usda.gov/snotel/
+Snotel data for this notebook are accessed via theConsortium of Universities for the Advancement of Hydrologic Science, Inc Hydrologic Information Systems (CUAHSI-HIS) Water One Flow Application Programming Interface (API). More information about this service can be found here: https://his.cuahsi.org/wofws.html#wds.
 
+There is a function in the repository downloader.py file, called in the notebook which will allow the user to download snotel data with site code and variable code inputs.
