@@ -28,5 +28,5 @@ jobs:
           git config user.name "Jen-Morse"
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           git add --all
-          git commit -m "initial commit"
+          git commit -m "ipynb to html"
           git push origin HEAD:main
