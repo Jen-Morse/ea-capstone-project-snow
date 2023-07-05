@@ -38,9 +38,9 @@ Installing miniconda: https://docs.conda.io/en/latest/miniconda.html
 
 About Conda Environments: https://conda.io/docs/user-guide/tasks/manage-environments.html
 
-To begin, navigate to the directory where the environment.yml file lives. (This will be the directory you cloned or downloaded the repository to). You can use the bash command
+Then navigate to the directory where the environment.yml file lives. (This will be the directory you cloned from github for the repository). You can use the bash command
 ```
-$ cd your-directory
+$ cd snowpack-obs-comparison-and-trends
 ```
 at the command line. Then create the environment using the command:
 
