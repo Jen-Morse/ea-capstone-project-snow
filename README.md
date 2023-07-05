@@ -1,4 +1,6 @@
 # snowpack-obs-comparison-and-trends
+[![DOI](https://zenodo.org/badge/627970987.svg)](https://zenodo.org/badge/latestdoi/627970987)
+
 # Snowpack Observation Comparison and trend analysis for City of Boulder Water Resources Management Repository
 
 
