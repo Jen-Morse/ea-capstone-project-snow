@@ -26,21 +26,53 @@ Can existing Niwot Long Term Ecological Research (LTER) snowpack and hydrologica
 
 ### Instructions to set up Python Environment and Run Notebook
 
-Detailed instructions and resources on how to set up python and create a python environment can be found here at Earth Lab's Earth Data Science online textbook and tutorials here:  https://www.earthdatascience.org/workshops/setup-earth-analytics-python/setup-python-conda-earth-analytics-environment/
+Detailed instructions and resources on how to set up python and create a python environment can be found here at Earth Lab's Earth Data Science online textbook and tutorials here:  https://www.earthdatascience.org/workshops/setup-earth-analytics-python/setup-python-conda-earth-analytics-environment/. Or follow the directions below.
 
-To set up the Python Environment needed to run the snowpack-obs-comparison-and-trends.ipynb notebook, follow the above instructions and modify as follows:
+Install the environment.yml file on your Local Computer.
 
-- fork and clone the snowpack-obs-comparison-and-trends repository: https://github.com/Jen-Morse/ea-capstone-project-snow, rather than the earth-analytics repository and environment.yml file.
+To begin, install git and conda for Python 3.x.
 
-- create the python environment with all of the libraries needed to run the snowpack-obs-comparison-and-trends.ipynb notebook file. 
+Installing git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
-- Once the environment has been created and activated, type
+Installing miniconda: https://docs.conda.io/en/latest/miniconda.html
+
+About Conda Environments: https://conda.io/docs/user-guide/tasks/manage-environments.html
+
+To begin, navigate to the directory where the environment.yml file lives. (This will be the directory you cloned or downloaded the repository to). You can use the bash command
+```
+$ cd your-directory
+```
+at the command line. Then create the environment using the command:
+
+conda env create -f environment.yml
+
+This will take a bit of time to run (sometimes up to an hour). If you want to shorten the time to solve the environment, use mamba.
+
+First, install mamba from the command line:
+```
+-c conda-forge mamba
+```
+
+Then, instead of creating your environment with conda, replace conda with mamba:
+```
+mamba env create -f environment.yml
+```
+
+More about mamba can be found here: https://anaconda.org/conda-forge/mamba
+
+After your environment is installed, activate the environment using:
+```
+conda activate earth-analytics-python
+```
+(The environment name is earth-analytics-python as defined in the environment.yml file).
+
+Once the environment has been created and activated, type
 ```
    jupyter notebook
 ```
 at the command line to open the cloned repository in Jupyter with a web browser. You may now preview any of the repository files. To run the notebook, open the snow-pack-obs-comparison-and-trends.ipynb file and select 'Run All' from the Kernal drop down menu.
 
-- You may also run the notebook from the command line if you would like the outputs with out previewing the notebook with Jupyter. To do this type
+You may also run the notebook from the command line if you would like the outputs with out previewing the notebook with Jupyter. To do this type
 ```
    jupyter run snow-pack-obs-comparison-and-trends.ipynb
 ```
@@ -51,7 +83,8 @@ at the command line.
 You may produce an .html version of the Ipython Notebook snowpack-obs-comparison-and-trends.ipynb file through using github actions. To run the workflow:
 - From the repository main page in github, choose 'Actions' from the menu bar, then select the ipython_notebook_to_html workflow.
 - Once you have selected the workflow, you can select the drop down menu 'Run Workflow' in green on the right of your screen, then from the drop down, select 'Run Workflow' again.
-- An HTML file, snopack-obs-comparison-and-trends.html, will be added to the repository. 
+- An HTML file, snopack-obs-comparison-and-trends.html, will be added to the repository.
+- More on github actions found here: https://github.com/features/actions
 
 ### Data Access
 
