@@ -1,4 +1,4 @@
-name: snowpack-obs
+name: snowpack-obs-python
 channels:
   - conda-forge
   - defaults
