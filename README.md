@@ -38,26 +38,26 @@ Installing miniconda: https://docs.conda.io/en/latest/miniconda.html
 
 About Conda Environments: https://conda.io/docs/user-guide/tasks/manage-environments.html
 
-Then navigate to the directory where the environment.yml file lives. (This will be the directory you cloned from github for the repository). You can use the bash command
+Open a terminal or command line on your local computer.
+
+Navigate to the directory where the environment.yml file lives. (This will be the directory you cloned from github for the repository).
 ```
 $ cd snowpack-obs-comparison-and-trends
 ```
-at the command line. Then create the environment using the command:
-
+Create the environment using conda:
+```
 conda env create -f environment.yml
-
+```
 This will take a bit of time to run (sometimes up to an hour). If you want to shorten the time to solve the environment, use mamba.
 
-First, install mamba from the command line:
+First, install mamba:
 ```
 -c conda-forge mamba
 ```
-
 Then, instead of creating your environment with conda, replace conda with mamba:
 ```
 mamba env create -f environment.yml
 ```
-
 More about mamba can be found here: https://anaconda.org/conda-forge/mamba
 
 After your environment is installed, activate the environment using:
@@ -66,7 +66,7 @@ conda activate snowpack-obs-python
 ```
 The environment name is snowpack-obs-python as defined in the environment.yml file. 
 
-(Note this is the python environment created by earthlab, where the detailed instructions are linked to, with an added package (ulmo) for downloading snotel data from CUAHSI. If you are an earth analytics certificate student, or already hgave the earth-anlytics-python environment installed on your local computer and want to save time, you could run the notebook with this environment by just adding the ulmo package with -c conda-forge ulmo).
+(Note this is the python environment created by earthlab, where the detailed instructions are linked to, with an added package (ulmo) for downloading snotel data from CUAHSI. If you are an earth analytics certificate student, or already have the earth-anlytics-python environment installed on your local computer and want to save time, you could run the snowpack-obs notebook with this environment by just adding the ulmo package with -c conda-forge ulmo).
 
 Once the environment has been created and activated, type
 ```
