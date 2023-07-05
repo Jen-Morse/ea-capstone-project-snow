@@ -48,9 +48,10 @@ at the command line.
 
 ### Instructions to run ipython_notebook_to_html.yml Workflow
 
-You may produce a .html version of the Ipython Noterbook snowpack-obs-comparison-and-trends.ipynb file through using github actions. To run the workflow:
+You may produce an .html version of the Ipython Notebook snowpack-obs-comparison-and-trends.ipynb file through using github actions. To run the workflow:
 - From the repository main page in github, choose 'Actions' from the menu bar, then select the ipython_notebook_to_html workflow.
-- Once you have selected the workflow, you can select the drop down menu 'Run Workflow' in green on the right of your screen, then from the drop down, select 'Run Workflow' again. 
+- Once you have selected the workflow, you can select the drop down menu 'Run Workflow' in green on the right of your screen, then from the drop down, select 'Run Workflow' again.
+- An HTML file, snopack-obs-comparison-and-trends.html, will be added to the repository. 
 
 ### Data Access
 
