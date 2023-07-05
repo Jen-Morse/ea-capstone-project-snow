@@ -1,4 +1,4 @@
-name: earth-analytics-python
+name: snowpack-obs
 channels:
   - conda-forge
   - defaults
