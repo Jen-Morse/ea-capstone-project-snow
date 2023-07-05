@@ -62,9 +62,11 @@ More about mamba can be found here: https://anaconda.org/conda-forge/mamba
 
 After your environment is installed, activate the environment using:
 ```
-conda activate earth-analytics-python
+conda activate snowpack-obs-python
 ```
-(The environment name is earth-analytics-python as defined in the environment.yml file).
+The environment name is snowpack-obs-python as defined in the environment.yml file. 
+
+(Note this is the python environment created by earthlab, where the detailed instructions are linked to, with an added package (ulmo) for downloading snotel data from CUAHSI. If you are an earth analytics certificate student, or already hgave the earth-anlytics-python environment installed on your local computer and want to save time, you could run the notebook with this environment by just adding the ulmo package with -c conda-forge ulmo).
 
 Once the environment has been created and activated, type
 ```
